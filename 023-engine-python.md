@@ -1,45 +1,45 @@
 R works, of course.
 
 
-```r
+```{.r .chunk-source}
 library(knitr)
 set.seed(123)
 rnorm(5)
 ```
 
-```
+```{.chunk-output}
 ## [1] -0.56048 -0.23018  1.55871  0.07051  0.12929
 ```
 
 Does **knitr** work with Python? Use the chunk option `engine='python'`:
 
 
-```python
+```{.python .chunk-source}
 x = 'hello, python world!'
 print(x)
 ```
 
-```
+```{.chunk-output}
 ## hello, python world!
 ```
 
-```python
+```{.python .chunk-source}
 print(x.split(' '))
 ```
 
-```
+```{.chunk-output}
 ## ['hello,', 'python', 'world!']
 ```
 
 Or use the syntax ```` ```{python} ````:
 
 
-```python
+```{.python .chunk-source}
 x = 'hello, python world!'
 print(x.split(' '))
 ```
 
-```
+```{.chunk-output}
 ## ['hello,', 'python', 'world!']
 ```
 
@@ -52,7 +52,7 @@ If all the chunks below are python chunks, we can set the engine globally:
 You can use some chunk options like `eval`, `echo` and `results`. For example, `eval=FALSE` (do not evaluate code):
 
 
-```python
+```{.python .chunk-source}
 x = 'hello, python world!'
 print(x)
 print(x.split(' '))
@@ -61,30 +61,30 @@ print(x.split(' '))
 or `echo=FALSE` (hide source code):
 
 
-```
+```{.chunk-output}
 ## hello, python world!
 ```
 
-```
+```{.chunk-output}
 ## ['hello,', 'python', 'world!']
 ```
 
 or `results='hide'`:
 
 
-```python
+```{.python .chunk-source}
 x = 'hello, python world!'
 print(x)
 ```
 
-```python
+```{.python .chunk-source}
 print(x.split(' '))
 ```
 
 or `results='asis'`:
 
 
-```python
+```{.python .chunk-source}
 print '**Write** _something_ in `Markdown` from `Python`!'
 ```
 
@@ -93,14 +93,14 @@ print '**Write** _something_ in `Markdown` from `Python`!'
 You can also cache the computation:
 
 
-```python
+```{.python .chunk-source}
 import time
 # pretend this is a time-consuming task...
 time.sleep(10)
 print(1+1)
 ```
 
-```
+```{.chunk-output}
 ## 2
 ```
 

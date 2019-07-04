@@ -3,18 +3,18 @@
 Use `Sys.setenv()`:
 
 
-```r
+```{.r .chunk-source}
 Sys.setenv(EXAMPLES = "example/path")
 ```
 
 Now we write a `bash` code chunk:
 
 
-```bash
+```{.bash .chunk-source}
 echo $EXAMPLES
 ```
 
-```
+```{.chunk-output}
 ## example/path
 ```
 

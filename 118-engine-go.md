@@ -1,6 +1,6 @@
 Hello package!
 
-```go
+```{.go .chunk-source}
 package hello 
 
 func HelloWorld(){
@@ -10,7 +10,7 @@ func HelloWorld(){
 
 Hello main!
 
-```go
+```{.go .chunk-source}
 package main 
 
 func main(){
@@ -18,13 +18,13 @@ func main(){
 }
 ```
 
-```
+```{.chunk-output}
 ## hello world!
 ```
 
 Or specify an engine:
 
-```go
+```{.go .chunk-source}
 package main
 
 func main(){
@@ -32,6 +32,6 @@ func main(){
 }
 ```
 
-```
+```{.chunk-output}
 ## hello world!
 ```

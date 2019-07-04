@@ -9,11 +9,11 @@ You need to install `coffee`, the command-line version of [CoffeeScript](http://
 CoffeeScript compiles javascript:
 
 
-```coffee
+```{.coffee .chunk-source}
 @square = (x) -> x * x
 ```
 
-```
+```{.chunk-output}
 // (function() {
 // 
 //   this.square = function(x) {
@@ -26,12 +26,12 @@ CoffeeScript compiles javascript:
 To use CoffeeScript in an HTML document, use `results="asis"`, `echo=FALSE`, and wrap the chunk in `<script>` tags.
 
 
-```coffee
+```{.coffee .chunk-source}
 @square = (x) -> x * x
 @cube   = (x) -> square(x) * x
 ```
 
-```coffee
+```{.coffee .chunk-source}
 p = document.createElement("p");
 p.appendChild(document.createTextNode("The cube of 3 is " + cube(3)))
 document.body.appendChild(p)
@@ -65,7 +65,7 @@ document.body.appendChild(p)
 Of course you can also run the code, if you remove the `-p` flag from the chunk option `engine.opts` (I'm not evaluating this code chunk here because I do not have a proper version of `coffee` on Debian yet; if you do, you can remove `eval=FALSE`):
 
 
-```coffee
+```{.coffee .chunk-source}
 x = 42
 console.log "The answer is ", x
 ```

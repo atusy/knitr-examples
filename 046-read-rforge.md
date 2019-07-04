@@ -2,16 +2,16 @@ This demo shows you how to reference code in a URL. We use R-Forge as an example
 
 We cache this chunk so that the next time we compile this document, the code does not need to be read from the web again.
 
-```r
+```{.r .chunk-source}
 library(knitr)
 ```
 
-```r
+```{.r .chunk-source}
 demo.sub = read_rforge("rgl/demo/subdivision.r", project = "rgl")
 head(demo.sub)
 ```
 
-```
+```{.chunk-output}
 ## [1] ""                                  
 ## [2] "# RGL-demo: subdivision surfaces"  
 ## [3] "# author: Daniel Adler"            
@@ -23,14 +23,14 @@ head(demo.sub)
 Once we have the source code, we can insert it into **knitr** with `read_chunk()`:
 
 
-```r
+```{.r .chunk-source}
 read_chunk(lines = demo.sub, labels = "rgl-sub")
 ```
 
 That means we assigned the code to a chunk named `rgl-sub`, which appears below:
 
 
-```r
+```{.r .chunk-source}
 # RGL-demo: subdivision surfaces author: Daniel Adler $Id$
 
 rgl.demo.subdivision <- function() {
@@ -66,7 +66,7 @@ rgl.demo.subdivision()
 You can actually run the code and capture the rgl plot, but before that we need to load the package and set a rgl hook:
 
 
-```r
+```{.r .chunk-source}
 library(rgl)
 knit_hooks$set(rgl = hook_rgl)
 ```
@@ -74,7 +74,7 @@ knit_hooks$set(rgl = hook_rgl)
 Now you can see the 3D plot:
 
 
-```r
+```{.r .chunk-source}
 open3d()
 rgl.demo.subdivision()
 ```

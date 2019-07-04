@@ -14,11 +14,11 @@ Using R Markdown, the default behavior is to include the Bootstrap framework. Th
 For example, we are warned that the normal subsetting of a data frame can be type-unstable. To show this here,  the chunk options are set: `class.source = 'bg-warning', class.output = 'bg-warning'`.
 
 
-```{.r .bg-warning}
+```{.r .bg-warning .chunk-source}
 mtcars[, "mpg"]
 ```
 
-```{.bg-warning}
+```{.bg-warning .chunk-output}
 ##  [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2
 ## [15] 10.4 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4
 ## [29] 15.8 19.7 15.0 21.4
@@ -27,11 +27,11 @@ mtcars[, "mpg"]
 To make sure that we return a data frame, we set the argument `drop = FALSE`. Here the chunk options are set: `class.source = 'bg-success', class.output = 'bg-success'`.
 
 
-```{.r .bg-success}
+```{.r .bg-success .chunk-source}
 mtcars[, "mpg", drop = FALSE]
 ```
 
-```{.bg-success}
+```{.bg-success .chunk-output}
 ##                      mpg
 ## Mazda RX4           21.0
 ## Mazda RX4 Wag       21.0
@@ -76,11 +76,11 @@ Note that for this example, only `class.source` is set.
 
 
 
-```{.r .bad-code}
+```{.r .bad-code .chunk-source}
 mtcars[, "mpg"]
 ```
 
-```
+```{.chunk-output}
 ##  [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2
 ## [15] 10.4 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4
 ## [29] 15.8 19.7 15.0 21.4

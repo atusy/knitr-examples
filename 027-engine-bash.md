@@ -1,21 +1,21 @@
 # Run bash scripts
 
 
-```r
+```{.r .chunk-source}
 # should exist
 Sys.which("bash")
 ```
 
-```
+```{.chunk-output}
 ##        bash 
 ## "/bin/bash"
 ```
 
-```r
+```{.r .chunk-source}
 Sys.which("sh")
 ```
 
-```
+```{.chunk-output}
 ##        sh 
 ## "/bin/sh"
 ```
@@ -23,14 +23,14 @@ Sys.which("sh")
 Does `bash` work?
 
 
-```bash
+```{.bash .chunk-source}
 echo hello world
 echo 'a b c' | sed 's/ /\|/g'
 # number of lines
 awk 'END{print NR;}' 027-engine-bash.Rmd
 ```
 
-```
+```{.chunk-output}
 ## hello world
 ## a|b|c
 ## 23
@@ -39,12 +39,12 @@ awk 'END{print NR;}' 027-engine-bash.Rmd
 How about `sh`?
 
 
-```sh
+```{.sh .chunk-source}
 # run wc on all engine examples
 ls | grep engine | head -n8 | xargs wc
 ```
 
-```
+```{.chunk-output}
 ##  124  230 1634 023-engine-python.md
 ##   73  179 1416 023-engine-python.Rmd
 ##   16   38  161 024-engine-awk.md

@@ -17,12 +17,12 @@ For Markdown, we can add an empty string after ```` ```{r} ````; **knitr** will 
 By comparison, this chunk will be identified by **knitr** as usual:
 
 
-```r
+```{.r .chunk-source}
 n = 10
 rnorm(n)
 ```
 
-```
+```{.chunk-output}
 ##  [1] -0.56048 -0.23018  1.55871  0.07051  0.12929  1.71506  0.46092
 ##  [8] -1.26506 -0.68685 -0.44566
 ```

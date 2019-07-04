@@ -1,12 +1,12 @@
 # Compile C code
 
 
-```r
+```{.r .chunk-source}
 # is gcc there?
 Sys.which("gcc")
 ```
 
-```
+```{.chunk-output}
 ##            gcc 
 ## "/usr/bin/gcc"
 ```
@@ -14,7 +14,7 @@ Sys.which("gcc")
 Does `engine = 'c'` work?
 
 
-```c
+```{.c .chunk-source}
 void square(double *x) {
   *x = *x * *x;
 }
@@ -23,20 +23,20 @@ void square(double *x) {
 Test the `square()` function:
 
 
-```r
+```{.r .chunk-source}
 .C("square", 9)
 ```
 
-```
+```{.chunk-output}
 ## [[1]]
 ## [1] 81
 ```
 
-```r
+```{.r .chunk-source}
 .C("square", 123)
 ```
 
-```
+```{.chunk-output}
 ## [[1]]
 ## [1] 15129
 ```

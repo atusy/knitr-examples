@@ -25,11 +25,11 @@ This first chunk creates the extra lines for the latex header. We use the
 We can then do some simple R math.
 
 
-```r
+```{.r .chunk-source}
 2 + 2
 ```
 
-```
+```{.chunk-output}
 ## [1] 4
 ```
 
@@ -38,7 +38,7 @@ We can then do some simple R math.
 
 To compile this document in R:
 
-```r
+```{.r .chunk-source}
 library(knitr)
 knit("095-pandoc-header.Rmd")
 pandoc("095-pandoc-header", format = "latex")

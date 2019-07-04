@@ -15,11 +15,11 @@
 # A bit R code
 
 
-```r
+```{.r .chunk-source}
 head(cars)
 ```
 
-```
+```{.chunk-output}
 ##   speed dist
 ## 1     4    2
 ## 2     4   10
@@ -29,11 +29,11 @@ head(cars)
 ## 6     9   10
 ```
 
-```r
+```{.r .chunk-source}
 cor(cars)
 ```
 
-```
+```{.chunk-output}
 ##        speed   dist
 ## speed 1.0000 0.8069
 ## dist  0.8069 1.0000
@@ -42,7 +42,7 @@ cor(cars)
 # Graphics too
 
 
-```r
+```{.r .chunk-source}
 library(ggplot2)
 qplot(speed, dist, data = cars) + geom_smooth()
 ```
@@ -76,11 +76,11 @@ qplot(speed, dist, data = cars) + geom_smooth()
 It is good to include the session info, e.g. this document is produced with **knitr**. Here is my session info:
 
 
-```r
+```{.r .chunk-source}
 print(sessionInfo(), locale = FALSE)
 ```
 
-```
+```{.chunk-output}
 ## R version 3.2.3 (2015-12-10)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Ubuntu 15.04

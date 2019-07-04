@@ -3,12 +3,12 @@
 Long lines in the output will not be (hard-)wrapped automatically unless you break them manually.
 
 
-```r
+```{.r .chunk-source}
 a <- "## \"stx2A; shiga-like toxin II A subunit encoded by bacteriophage BP-933W; K11006 shiga toxin subunit A\" "
 a
 ```
 
-```
+```{.chunk-output}
 ## [1] "## \"stx2A; shiga-like toxin II A subunit encoded by bacteriophage BP-933W; K11006 shiga toxin subunit A\" "
 ```
 
@@ -17,7 +17,7 @@ Perhaps you see it is wrapped in RStudio, but that is because `<pre>` has the CS
 You can redefine the output hook function so that you can instruct some chunks to hard-wrap their output lines, e.g.
 
 
-```r
+```{.r .chunk-source}
 library(knitr)
 hook_output = knit_hooks$get("output")
 knit_hooks$set(output = function(x, options) {
@@ -36,11 +36,11 @@ knit_hooks$set(output = function(x, options) {
 Now see the output of `a` (note `linewidth` is not a default **knitr** option):
 
 
-```r
+```{.r .chunk-source}
 a
 ```
 
-```
+```{.chunk-output}
 ## [1] "## \"stx2A; shiga-like toxin II A subunit encoded
 by bacteriophage BP-933W; K11006 shiga toxin subunit A\" "
 ```

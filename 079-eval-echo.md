@@ -3,7 +3,7 @@
 For demonstration purposes, we may want to show some source code in the output, but really evaluate different code in the background.
 
 
-```r
+```{.r .chunk-source}
 library(knitr)
 hook_source = knit_hooks$get("source")
 knit_hooks$set(source = function(x, options) {
@@ -17,12 +17,12 @@ knit_hooks$set(source = function(x, options) {
 The trick is to mask the source code in special comments (e.g. `#'#'`), and remove the comment markers later. Of course, you have to guarantee these markers are unique.
 
 
-```r
+```{.r .chunk-source}
 x = 2
 1/sqrt(2 * pi) * exp(-x^2/2)
 ```
 
-```
+```{.chunk-output}
 ## [1] 0.05399
 ```
 

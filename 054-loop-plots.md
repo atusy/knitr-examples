@@ -1,7 +1,7 @@
 We can draw plots in a loop.
 
 
-```r
+```{.r .chunk-source}
 for (i in 1:5) {
     cat("\n\nthis is plot ", i, "\n\n")
     plot(1:i)

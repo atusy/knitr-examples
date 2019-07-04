@@ -14,10 +14,10 @@ from `rmarkdown`.
 This is the child.
 
 
-```r
+```{.r .chunk-source}
 2 * 3 == 4
 ```
 
-```
+```{.chunk-output}
 ## [1] FALSE
 ```

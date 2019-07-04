@@ -7,7 +7,7 @@ A chunk hook has three arguments: `before`, `options` and `envir`. We show how t
 It is a logical argument: `before == TRUE` executes code before a chunk.
 
 
-```r
+```{.r .chunk-source}
 library(knitr)
 knit_hooks$set(foo1 = function(before, options, envir) {
     if (before) {
@@ -22,11 +22,11 @@ Test the `foo1` hook:
 
 _I appear before a chunk!_
 
-```r
+```{.r .chunk-source}
 1 + 1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
@@ -39,7 +39,7 @@ _I am after a chunk..._
 It contains all the chunk options (include global options) for the current chunk.
 
 
-```r
+```{.r .chunk-source}
 knit_hooks$set(foo2 = function(before, options, envir) {
     if (!before) {
         z = capture.output(str(options[c("eval", "dev", "results", "bar1", "bar2", 
@@ -53,11 +53,11 @@ knit_hooks$set(foo2 = function(before, options, envir) {
 Test the `foo2` hook:
 
 
-```r
+```{.r .chunk-source}
 1 + 1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
@@ -76,7 +76,7 @@ Some chunk options in the above chunk are:
 It is the environment of the current chunk.
 
 
-```r
+```{.r .chunk-source}
 knit_hooks$set(foo3 = function(before, options, envir) {
     if (!before) {
         paste("Objects available in the above chunk:", paste("`", ls(envir), 
@@ -88,7 +88,7 @@ knit_hooks$set(foo3 = function(before, options, envir) {
 Test the `foo3` hook:
 
 
-```r
+```{.r .chunk-source}
 x2 = 1 + 1
 y3 = rnorm(10)
 ```
@@ -98,7 +98,7 @@ Objects available in the above chunk: `x2`, `y3`
 Another example:
 
 
-```r
+```{.r .chunk-source}
 knit_hooks$set(foo4 = function(before, options, envir) {
     if (!before && exists("z5", envir = envir)) {
         sprintf("**Ha! I see z5 = %.3f!**", envir$z5)
@@ -109,18 +109,18 @@ knit_hooks$set(foo4 = function(before, options, envir) {
 Test `foo4`:
 
 
-```r
+```{.r .chunk-source}
 pi
 ```
 
-```
+```{.chunk-output}
 ## [1] 3.142
 ```
 
 This above chunk is quiet because `z5` does not exist yet.
 
 
-```r
+```{.r .chunk-source}
 z5 = 2 * pi
 ```
 

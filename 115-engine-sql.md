@@ -3,28 +3,28 @@ title: "Knit SQL Demo"
 ---
 
 
-```r
+```{.r .chunk-source}
 library(DBI)
 db <- dbConnect(RSQLite::SQLite(), dbname = ":memory:")
 ```
 
 
-```sql
+```{.sql .chunk-source}
 DROP TABLE IF EXISTS packages
 ```
 
 
-```sql
+```{.sql .chunk-source}
 CREATE TABLE packages (id INTEGER, name TEXT)
 ```
 
 
-```sql
+```{.sql .chunk-source}
 INSERT INTO packages VALUES (1, 'readr'), (2, 'readxl'), (3, 'haven')
 ```
 
 
-```sql
+```{.sql .chunk-source}
 SELECT * FROM packages
 ```
 
@@ -38,22 +38,22 @@ SELECT * FROM packages
 |3  |haven  |
 
 
-```r
+```{.r .chunk-source}
 packageReadR <- "readr"
 ```
 
 
-```sql
+```{.sql .chunk-source}
 SELECT * FROM packages
 WHERE name = ?packageReadR
 ```
 
 
-```r
+```{.r .chunk-source}
 readrPackage
 ```
 
-```
+```{.chunk-output}
 ##   id  name
 ## 1  1 readr
 ```

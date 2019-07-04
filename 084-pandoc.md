@@ -42,13 +42,13 @@ howdy howdy
 # Okay, some R code
 
 
-```r
+```{.r .chunk-source}
 fit = lm(dist ~ speed, data = cars)
 b = coef(fit)  # coefficients
 summary(fit)
 ```
 
-```
+```{.chunk-output}
 ## 
 ## Call:
 ## lm(formula = dist ~ speed, data = cars)
@@ -74,7 +74,7 @@ The code will be highlighted in all output formats.
 # And some pictures
 
 
-```r
+```{.r .chunk-source}
 par(mfrow = c(2, 2), pch = 20, mar = c(4, 4, 2, 0.1), bg = "white")
 plot(fit)
 ```

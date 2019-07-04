@@ -3,16 +3,16 @@
 `cache=FALSE` or `cache=0` means no cache:
 
 
-```r
+```{.r .chunk-source}
 Sys.sleep(1)
 1 + 1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```r
+```{.r .chunk-source}
 plot(cars)
 ```
 
@@ -24,16 +24,16 @@ the document is recompiled; note the plots are also saved as display lists,
 and will be redrawn every time the document is recompiled:
 
 
-```r
+```{.r .chunk-source}
 Sys.sleep(1)
 1 + 1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```r
+```{.r .chunk-source}
 plot(cars)
 ```
 
@@ -44,16 +44,16 @@ will not be redrawn, in which case you need to make sure you did not delete
 the figure files manually:
 
 
-```r
+```{.r .chunk-source}
 Sys.sleep(1)
 1 + 1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```r
+```{.r .chunk-source}
 plot(cars)
 ```
 
@@ -64,16 +64,16 @@ the output hooks will be called when the document is recompiled, and the
 plots will not be redrawn, either:
 
 
-```r
+```{.r .chunk-source}
 Sys.sleep(1)
 1 + 1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```r
+```{.r .chunk-source}
 plot(cars)
 ```
 
@@ -82,7 +82,7 @@ plot(cars)
 Below is a test case for [#588](https://github.com/yihui/knitr/issues/588):
 
 
-```r
+```{.r .chunk-source}
 pairs(matrix(rnorm(100), ncol = 100), labels = 1:100, pch = ".")
 ```
 
@@ -91,7 +91,7 @@ pairs(matrix(rnorm(100), ncol = 100), labels = 1:100, pch = ".")
 Another test case, with more plots:
 
 
-```r
+```{.r .chunk-source}
 Sys.sleep(5)
 plot(1:10)
 abline(0, 1)
@@ -99,7 +99,7 @@ abline(0, 1)
 
 ![plot of chunk test-cache-f](http://db.yihui.name/knitr-examples/figure/101-cache-levels-test-cache-f-1.png)
 
-```r
+```{.r .chunk-source}
 plot(2:11)
 ```
 

@@ -1,12 +1,12 @@
 # Run perl scripts
 
 
-```r
+```{.r .chunk-source}
 # should exist
 Sys.which("perl")
 ```
 
-```
+```{.chunk-output}
 ##            perl 
 ## "/usr/bin/perl"
 ```
@@ -14,12 +14,12 @@ Sys.which("perl")
 Does `perl` work?
 
 
-```perl
+```{.perl .chunk-source}
 $test = "jello world";
 $test =~ s/j/h/;
 print $test
 ```
 
-```
+```{.chunk-output}
 ## hello world
 ```

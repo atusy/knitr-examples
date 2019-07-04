@@ -3,7 +3,7 @@
 First we redefine the output hook:
 
 
-```r
+```{.r .chunk-source}
 library(knitr)
 # the default output hook
 hook_output = knit_hooks$get("output")
@@ -23,29 +23,29 @@ knit_hooks$set(output = function(x, options) {
 And we do not want the output to be more than 4 lines, so we set this option globally:
 
 
-```r
+```{.r .chunk-source}
 opts_chunk$set(out.lines = 4)
 ```
 
 Test the new output hook:
 
 
-```r
+```{.r .chunk-source}
 1 + 1  # this is short
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
 The output of this chunk is truncated:
 
 
-```r
+```{.r .chunk-source}
 1:100
 ```
 
-```
+```{.chunk-output}
 ##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
 ##  [18]  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34
 ##  [35]  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51

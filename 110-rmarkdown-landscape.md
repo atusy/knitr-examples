@@ -9,21 +9,21 @@ classoption: landscape
 When converting R Markdown to PDF, we can use [a lot of variables](http://johnmacfarlane.net/pandoc/README.html) for the LaTeX template. This short example shows the `classoption` variable that takes the value `landscape` to produce PDF in the landscape orientation.
 
 
-```r
+```{.r .chunk-source}
 str(cars)
 ```
 
-```
+```{.chunk-output}
 ## 'data.frame':	50 obs. of  2 variables:
 ##  $ speed: num  4 4 7 7 8 9 10 10 10 11 ...
 ##  $ dist : num  2 10 4 22 16 10 18 26 34 17 ...
 ```
 
-```r
+```{.r .chunk-source}
 summary(lm(dist ~ speed, cars))
 ```
 
-```
+```{.chunk-output}
 ## 
 ## Call:
 ## lm(formula = dist ~ speed, data = cars)

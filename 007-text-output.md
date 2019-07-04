@@ -5,15 +5,15 @@ See if chunk options like `tidy`, `prompt` and `echo`, etc work as expected.
 ## A normal chunk
 
 
-```r
+```{.r .chunk-source}
 1 + 1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```r
+```{.r .chunk-source}
 for (i in 1:10) {
     # nothing before 10
     if (i >= 10) 
@@ -21,25 +21,25 @@ for (i in 1:10) {
 }
 ```
 
-```
+```{.chunk-output}
 ## [1] 10
 ```
 
-```r
+```{.r .chunk-source}
 # two blank lines below
 
 
 dnorm(0)
 ```
 
-```
+```{.chunk-output}
 ## [1] 0.3989
 ```
 
 ## Do not evaluate
 
 
-```r
+```{.r .chunk-source}
 1 + 1
 for (i in 1:10) {
     # nothing before 10
@@ -55,15 +55,15 @@ dnorm(0)
 ## Add prompts
 
 
-```r
+```{.r .chunk-source}
 > 1 + 1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```r
+```{.r .chunk-source}
 > for (i in 1:10) {
 +     # nothing before 10
 +     if (i >= 10) 
@@ -71,25 +71,25 @@ dnorm(0)
 + }
 ```
 
-```
+```{.chunk-output}
 ## [1] 10
 ```
 
-```r
+```{.r .chunk-source}
 > # two blank lines below
 > 
 > 
 > dnorm(0)
 ```
 
-```
+```{.chunk-output}
 ## [1] 0.3989
 ```
 
 ## No evaluate or tidy
 
 
-```r
+```{.r .chunk-source}
 1+1
 for (i in 1:10) {
 # nothing before 10
@@ -104,63 +104,63 @@ dnorm(0)
 ## Do not tidy
 
 
-```r
+```{.r .chunk-source}
 1+1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```r
+```{.r .chunk-source}
 for (i in 1:10) {
 # nothing before 10
 if(i>=10)print(i)
 }
 ```
 
-```
+```{.chunk-output}
 ## [1] 10
 ```
 
-```r
+```{.r .chunk-source}
 # two blank lines below
 
 
 dnorm(0)
 ```
 
-```
+```{.chunk-output}
 ## [1] 0.3989
 ```
 
 ## Do not echo
 
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```
+```{.chunk-output}
 ## [1] 10
 ```
 
-```
+```{.chunk-output}
 ## [1] 0.3989
 ```
 
 ## Do not comment out results
 
 
-```r
+```{.r .chunk-source}
 1 + 1
 ```
 
-```
+```{.chunk-output}
 [1] 2
 ```
 
-```r
+```{.r .chunk-source}
 for (i in 1:10) {
     # nothing before 10
     if (i >= 10) 
@@ -168,51 +168,51 @@ for (i in 1:10) {
 }
 ```
 
-```
+```{.chunk-output}
 [1] 10
 ```
 
-```r
+```{.r .chunk-source}
 # two blank lines below
 
 
 dnorm(0)
 ```
 
-```
+```{.chunk-output}
 [1] 0.3989
 ```
 
 ## Do not echo the 2nd expression
 
 
-```r
+```{.r .chunk-source}
 1 + 1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```
+```{.chunk-output}
 ## [1] 10
 ```
 
-```r
+```{.r .chunk-source}
 # two blank lines below
 
 
 dnorm(0)
 ```
 
-```
+```{.chunk-output}
 ## [1] 0.3989
 ```
 
 ## Do not evaluate, echo the 2nd expression
 
 
-```r
+```{.r .chunk-source}
 for (i in 1:10) {
     # nothing before 10
     if (i >= 10) 
@@ -223,15 +223,15 @@ for (i in 1:10) {
 ## Only evaluate the first two expressions
 
 
-```r
+```{.r .chunk-source}
 1 + 1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```r
+```{.r .chunk-source}
 for (i in 1:10) {
     # nothing before 10
     if (i >= 10) 
@@ -239,11 +239,11 @@ for (i in 1:10) {
 }
 ```
 
-```
+```{.chunk-output}
 ## [1] 10
 ```
 
-```r
+```{.r .chunk-source}
 ## # two blank lines below
 ## 
 ## 
@@ -253,40 +253,40 @@ for (i in 1:10) {
 ## Add prompts but no tidy
 
 
-```r
+```{.r .chunk-source}
 > 1+1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```r
+```{.r .chunk-source}
 > for (i in 1:10) {
 + # nothing before 10
 + if(i>=10)print(i)
 + }
 ```
 
-```
+```{.chunk-output}
 ## [1] 10
 ```
 
-```r
+```{.r .chunk-source}
 > # two blank lines below
 > 
 > 
 > dnorm(0)
 ```
 
-```
+```{.chunk-output}
 ## [1] 0.3989
 ```
 
 ## Prompts, no evaluate or tidy
 
 
-```r
+```{.r .chunk-source}
 > 1+1
 > for (i in 1:10) {
 + # nothing before 10
@@ -301,20 +301,20 @@ for (i in 1:10) {
 ## Change prompts
 
 
-```r
+```{.r .chunk-source}
 options(prompt = "R> ", continue = "+  ")
 ```
 
 
-```r
+```{.r .chunk-source}
 R> 1 + 1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```r
+```{.r .chunk-source}
 R> for (i in 1:10) {
 +      # nothing before 10
 +      if (i >= 10) 
@@ -322,40 +322,40 @@ R> for (i in 1:10) {
 +  }
 ```
 
-```
+```{.chunk-output}
 ## [1] 10
 ```
 
-```r
+```{.r .chunk-source}
 R> # two blank lines below
 R> 
 R> 
 R> dnorm(0)
 ```
 
-```
+```{.chunk-output}
 ## [1] 0.3989
 ```
 
 ## Backslashes
 
 
-```r
+```{.r .chunk-source}
 {
     # can you deal with \code{foo} or \n, \a?
     gsub("\\.", "\\\\", "a.b.c")  # \link{bar}
 }
 ```
 
-```
+```{.chunk-output}
 ## [1] "a\\b\\c"
 ```
 
-```r
+```{.r .chunk-source}
 cat("a\tb\nc")
 ```
 
-```
+```{.chunk-output}
 ## a	b
 ## c
 ```
@@ -365,12 +365,12 @@ cat("a\tb\nc")
 We can set **formatR** options globally:
 
 
-```r
+```{.r .chunk-source}
 options(formatR.blank = FALSE)
 ```
 
 
-```r
+```{.r .chunk-source}
 1 + 1
 for (i in 1:10) {
     # nothing before 10
@@ -384,7 +384,7 @@ dnorm(0)
 Or locally in one chunk via `tidy.opts`. Do not keep comments:
 
 
-```r
+```{.r .chunk-source}
 1 + 1
 for (i in 1:10) {
     if (i >= 10) 
@@ -396,7 +396,7 @@ dnorm(0)
 Move left braces to the next line:
 
 
-```r
+```{.r .chunk-source}
 for (i in 1:10)
 {
     # nothing before 10
@@ -405,14 +405,14 @@ for (i in 1:10)
 }
 ```
 
-```
+```{.chunk-output}
 ## [1] 10
 ```
 
 Indent by 2 spaces:
 
 
-```r
+```{.r .chunk-source}
 1 + 1
 for (i in 1:10) {
   # nothing before 10
@@ -434,64 +434,64 @@ See <http://yihui.name/formatR> for details.
 Do not include messages:
 
 
-```r
+```{.r .chunk-source}
 1 + 1
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ```
 
-```r
+```{.r .chunk-source}
 message("helloooo!")
 ```
 
 No warnings:
 
 
-```r
+```{.r .chunk-source}
 1:2 + 1:3
 ```
 
-```
+```{.chunk-output}
 ## [1] 2 4 4
 ```
 
-```r
+```{.r .chunk-source}
 warning("no no no")
 ```
 
 Select warnings using numeric indices:
 
 
-```r
+```{.r .chunk-source}
 1:2 + 1:3
 ```
 
-```
+```{.chunk-output}
 ## [1] 2 4 4
 ```
 
-```r
+```{.r .chunk-source}
 warning("no no no")
 ```
 
-```
+```{.chunk-warning}
 ## Warning: no no no
 ```
 
 Invalid indices will select nothing:
 
 
-```r
+```{.r .chunk-source}
 1:2 + 1:3
 ```
 
-```
+```{.chunk-output}
 ## [1] 2 4 4
 ```
 
-```r
+```{.r .chunk-source}
 warning("no no no")
 ```
 
@@ -500,7 +500,7 @@ warning("no no no")
 Do not show text results:
 
 
-```r
+```{.r .chunk-source}
 1 + 1
 for (i in 1:10) {
     # nothing before 10
@@ -514,7 +514,7 @@ dnorm(0)
 Flush all results to the end of a chunk:
 
 
-```r
+```{.r .chunk-source}
 1 + 1
 for (i in 1:10) {
     # nothing before 10
@@ -525,7 +525,7 @@ for (i in 1:10) {
 dnorm(0)
 ```
 
-```
+```{.chunk-output}
 ## [1] 2
 ## [1] 10
 ## [1] 0.3989
@@ -534,7 +534,7 @@ dnorm(0)
 Output as is:
 
 
-```r
+```{.r .chunk-source}
 cat("_Markdown_,", "oh yeah, **Markdown**")
 ```
 
